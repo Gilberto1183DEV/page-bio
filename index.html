@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Priscillaspineli</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/foto.perfil.png" alt="Foto de Perfil">
+            <h1><strong>@priscillaspineli</strong></h1>
+            <p>Psicóloga Clínica <br>CRP 02/15499</p>
+        </header>
+        <section class="botoes-links">
+            <a href="https://priscillaspineli.youcanbook.me/" target='_blank' class="link">
+                <button>
+                    <span>Agendamento</span>
+                    <i class="bi bi-journal-bookmark-fill"></i>
+                </button>
+            </a>
+            <a href="https://wa.me/558195690460" target='_blank' class="link">
+                <button>
+                    <span>Whatsapp</span>
+                    <i class="bi bi-whatsapp"></i>
+                </button>
+            </a>
+            <a href="https://www.instagram.com/priscillaspineli" target='_blank' class="link">
+                <button>
+                    <span>Instagram</span>
+                    <i class="bi bi-instagram"></i>
+                </button>
+            </a>
+            <a href="https://spoti.fi/4divmLt" target='_blank' class="link">
+                <button>
+                    <span>Podcast</span>
+                    <i class="bi bi-mic"></i>
+                </button>
+            </a>
+        </section>
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <a href="https://spoti.fi/4c0mhpr" class="btn-footer" target='_blank'><i class="bi bi-spotify"></i></a>
+                    <a href="https://youtu.be/GATIzIhm65g?si=TYDR7XOFmFx7ZnE3" class="btn-footer" target='_blank'><i class="bi bi-youtube"></i></a>
+                    <a href="mailto:priscillaspine@gmail.com" class="btn-footer" target='_blank'><i class="bi bi-envelope-check-fill"></i></a>
+                </div>
+                <div class="footer-info">
+                    <p>&copy; 2024 Priscilla Spineli. Todos os direitos reservados.</p>
+                    <p>Feito com <i class="bi bi-heart"></i> <strong>por @gilbertoeoutrascoisas</strong></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Animação de botões ao passar o mouse
+        const buttons = document.querySelectorAll('.botoes-links button');
+
+        buttons.forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.transform = 'scale(1.1)';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+        // Função para copiar o endereço de email
+        document.getElementById('email-button').addEventListener('click', (e) => {
+            e.preventDefault(); // Previne o comportamento padrão do link
+            const email = 'seuemail@gmail.com';
+
+            // Cria um elemento temporário para copiar o texto
+            const tempInput = document.createElement('input');
+            tempInput.value = email;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+
+            // Alerta que o email foi copiado
+            alert(`Email ${email} copiado para a área de transferência!`);
+        });
+    </script>
+</body>
+</html>
